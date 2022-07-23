@@ -1,0 +1,56 @@
+
+import java.util.Scanner;
+
+public class COINSproject {
+
+
+    public static void main(String[] args) {
+        double dollar = 3.5260;
+        double euro = 3.685;
+        int choice_num = 9999;
+        double sum;
+        Scanner Sum = new Scanner(System.in);
+        while ( choice_num != 0){
+
+            System.out.println("Press  1 to convert a shekels to dollars \n" +
+                    "Press  2 to convert a dollars to shekels \n" +
+                    "Press  3 to convert a euro to shekels \n" +
+                    "Press  4 to convert a shekels to euros \n" +
+                    "press 0 to exit\n");
+
+            Scanner Choice = new Scanner(System.in);
+            choice_num = Choice.nextInt();
+
+            /////////////////////////////////////////////// Switch case -----------------
+            switch (choice_num) {
+
+                case 1:
+
+                    System.out.println("put your intended sum in shekels: ");
+                    sum = Sum.nextDouble();
+                    System.out.println("the sum in dollars will be :"+ (sum/dollar));
+                    System.out.println("\n");
+                    break;
+                case 2:
+                    System.out.println(" put your sum in dollars: ");
+                    sum = Sum.nextDouble();
+                    System.out.println("the sum in shekels will be: "+sum*dollar);
+                    System.out.println("\n");
+                    break;
+                case 3:
+                    System.out.println(" put your sum in euros: ");
+                    sum = Sum.nextDouble();
+                    System.out.println("the sum in shekels will be "+ (sum/euro));
+                    System.out.println("\n");
+                    break;
+                case 4:
+                    System.out.println(" put your sum in shekels: ");
+                    sum = Sum.nextDouble();
+                    System.out.println("the sum in euros will be: "+sum*euro);
+                    System.out.println("\n");
+                    break;
+                    
+                    }
+                    
+                 }
+             }
